@@ -237,8 +237,25 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 <script>
-  if (window.location.search.includes('success=true')) {
-    document.getElementById('success-message').style.display = 'block';
+  const params = new URLSearchParams(window.location.search);
+
+  if (params.get("success") === "true") {
+    // show success box
+    const msg = document.getElementById("success-message");
+    if (msg) msg.style.display = "block";
+
+    // OPTIONAL: auto-hide after 5 sec
+    setTimeout(() => { if (msg) msg.style.display = "none"; }, 5000);
+
+    // remove ?success=true from URL so refresh won't show again
+    params.delete("success");
+    const newQuery = params.toString();
+    const newUrl =
+      window.location.pathname +
+      (newQuery ? "?" + newQuery : "") +
+      window.location.hash;
+
+    window.history.replaceState({}, document.title, newUrl);
   }
 </script>
 </body>
