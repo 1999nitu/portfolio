@@ -236,7 +236,11 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
+<script>
+  if (window.location.search.includes('success=true')) {
+    document.getElementById('success-message').style.display = 'block';
+  }
+</script>
 </body>
 
 </html>
