@@ -1,6 +1,6 @@
 Thanks for downloading this template!
 
-Template Name: Kelly
-Template URL: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/
+Template Name: Navprit
+Template URL: https://bootstrapmade.com/Navprit-free-bootstrap-cv-resume-html-template/
 Author: BootstrapMade.com
 License: https://bootstrapmade.com/license/
